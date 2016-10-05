@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
-  # The priority is based upon order of creation: first created -> highest priority.
+  resources :authors, only: [:show, :new, :create, :edit, :update]
+  resources :posts, only: [:show, :new, :create, :edit, :update]
+    # resources :genres, only: [:show, :index, :new, :create, :edit, :update]
+  # The prioritrouy is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
